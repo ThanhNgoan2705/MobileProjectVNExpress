@@ -1,11 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-<<<<<<< HEAD
 import { AppModule } from '../src/app.module';
-=======
-import { AppModule } from "../src/app.module";
->>>>>>> 0dda948 (create Database with Prisma.)
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
