@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -18,23 +15,25 @@ model User {
   role      String    @default("USER")
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  Post      Post[]
   Comment   Comment[]
   Like      Like[]
+  Post      Post[]
 }
 
 model Post {
-  id         String    @id @default(uuid())
-  title      String
-  description    String
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
-  authorId   String
-  categoryId String?
-  Comment    Comment[]
-  Like       Like[]
-  Author     User      @relation(fields: [authorId], references: [id])
-  Category   Category? @relation(fields: [categoryId], references: [id])
+  id          String    @id @default(uuid())
+  title       String
+  description String
+  img         String
+  link        String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  authorId    String
+  categoryId  String?
+  Comment     Comment[]
+  Like        Like[]
+  Category    Category? @relation(fields: [categoryId], references: [id])
+  Author      User      @relation(fields: [authorId], references: [id])
 }
 
 model Comment {
@@ -42,26 +41,26 @@ model Comment {
   content   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  author    User     @relation(fields: [authorId], references: [id])
   authorId  String
-  post      Post     @relation(fields: [postId], references: [id])
   postId    String
+  post      Post     @relation(fields: [postId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id])
 }
 
 model Like {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  author    User     @relation(fields: [authorId], references: [id])
   authorId  String
-  post      Post     @relation(fields: [postId], references: [id])
   postId    String
+  post      Post     @relation(fields: [postId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id])
 }
 
 model Category {
   id        String   @id @default(uuid())
   name      String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @default(now()) @updatedAt
   Post      Post[]
 }
