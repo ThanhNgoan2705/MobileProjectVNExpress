@@ -1,19 +1,26 @@
-import { Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
+import { LoginDto } from './dto';
 
 @Controller('auth')
-export class AppController {
-  // AuthService được inject vào AuthController
-  // AuthService tự động được tạo ra khi khởi tạo controller
-  constructor(private authService: AuthService) {}
+export class AuthController {
+  constructor(private readonly authService: AuthService) {}
+
   @Post('/register')
-  register() {
-    return {
-      message: 'register success',
-    };
+  async register(@Body() body: { email: string; password: string }) {
+    const result = await this.authService.register(body.email, body.password);
+    if ('message' in result) {
+      return { error: result.message };
+    }
+    return { user: result };
   }
+
   @Post('/login')
-  login() {
-    return 'login success';
+  async login(@Body() loginDto: LoginDto) {
+    const result = await this.authService.login(loginDto);
+    if ('message' in result) {
+      return { error: result.message };
+    }
+    return { user: result };
   }
 }

@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1djns",
+        "name": "Thời sự",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "2cjkd",
+        "name": "Kinh doanh",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "3gtgjt",
+        "name": "Giải trí",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "4htghg",
+        "name": "Thể thao",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "5hrswt",
+        "name": "Pháp luật",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "6rytjy",
+        "name": "Giáo dục",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "7grhtjty",
+        "name": "Sức khỏe",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "8grtjyj",
+        "name": "Đời sống",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "9jr6jk7",
+        "name": "Du lịch",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    },
+    {
+        "id": "10fq3ytr",
+        "name": "Khoa học",
+        "createdAt": "2020-12-01T00:00:00.000Z",
+        "updatedAt": "2020-12-01T00:00:00.000Z"
+    }
+]
